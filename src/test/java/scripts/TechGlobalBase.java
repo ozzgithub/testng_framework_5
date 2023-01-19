@@ -12,6 +12,7 @@ public class TechGlobalBase {
     TechGlobalFrontendTestingHomePage techGlobalFrontendTestingHomePage;
     TechGlobalDynamicElementsPage techGlobalDynamicElementsPage;
     TechGlobalRadioButtonsPage techGlobalRadioButtonsPage;
+    TechGlobalCheckBoxPage techGlobalCheckBoxPage;
 
     TechGlobalWaitsPage techGlobalWaitsPage;
     @BeforeMethod
