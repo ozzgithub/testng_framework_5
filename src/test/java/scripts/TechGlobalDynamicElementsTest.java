@@ -20,8 +20,9 @@ Box 2
      */
     @BeforeMethod
     public void setPage(){
-        techGlobalDynamicElementsPage = new TechGlobalDynamicElementsPage();
         techGlobalFrontendTestingHomePage = new TechGlobalFrontendTestingHomePage();
+        techGlobalDynamicElementsPage = new TechGlobalDynamicElementsPage();
+
     }
 
     @Test(priority = 1, description = "Testing Dynamic Web Elements")

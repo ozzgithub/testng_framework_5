@@ -35,8 +35,16 @@ public class TechGlobalCheckBoxTest extends TechGlobalBase {
         techGlobalFrontendTestingHomePage.getFrontendTestingPage();
         techGlobalFrontendTestingHomePage.clickOnCard(6);
 
-        for (int i = 0; i < techGlobalCheckBoxPage.checkboxInput.size(); i++) {
+       /*
+        techGlobalCheckBoxPage.checkboxInput.forEach(cb -> {
+            Assert.assertTrue(cb.isDisplayed());
+            Assert.assertFalse(cb.isSelected());
+            Assert.assertTrue(cb.isEnabled());
+        } );
 
+        */
+
+        for (int i = 0; i < techGlobalCheckBoxPage.checkboxInput.size(); i++) {
 
             Assert.assertTrue(techGlobalCheckBoxPage.checkboxInput.get(i).isDisplayed());
             Assert.assertFalse(techGlobalCheckBoxPage.checkboxInput.get(i).isSelected());
@@ -61,7 +69,56 @@ public class TechGlobalCheckBoxTest extends TechGlobalBase {
 
         }
 
+    }
 
+
+    /**
+     * Click on "Practices" dropdown in the header
+     * Select the "Frontend Testing" option
+     * Click on the "Checkboxes" card
+     * Validate "Tesla" and "SpaceX" checkboxes are displayed, enabled and not selected
+     * Select both and validate they are both selected
+     * Deselect bpth and validate they are deselected
+     */
+
+
+
+    @Test(priority = 2, description = "Validate checboxes of second group")
+    public void checkBoxes2() {
+
+        techGlobalFrontendTestingHomePage.getFrontendTestingPage();
+        techGlobalFrontendTestingHomePage.clickOnCard(6);
+
+
+        for (int i = 0; i < techGlobalCheckBoxPage.checkboxInput2.size(); i++) {
+
+            Assert.assertTrue(techGlobalCheckBoxPage.checkboxInput2.get(i).isDisplayed());
+            Assert.assertFalse(techGlobalCheckBoxPage.checkboxInput2.get(i).isSelected());
+            Assert.assertTrue(techGlobalCheckBoxPage.checkboxInput2.get(i).isEnabled());
+
+        }
+
+        for (int i = 0; i < techGlobalCheckBoxPage.checkboxInput2.size(); i++) {
+            techGlobalCheckBoxPage.checkboxLabel2.get(i).click();
+            Waiter.pause(2);
+
+            Assert.assertTrue(techGlobalCheckBoxPage.checkboxInput2.get(i).isSelected());
+
+        }
+
+
+        for (int i = 0; i < techGlobalCheckBoxPage.checkboxInput.size(); i++) {
+            techGlobalCheckBoxPage.checkboxLabel2.get(i).click();
+            Waiter.pause(2);
+
+            Assert.assertFalse(techGlobalCheckBoxPage.checkboxInput2.get(i).isSelected());
+
+        }
 
     }
+
+
+
+
+
 }

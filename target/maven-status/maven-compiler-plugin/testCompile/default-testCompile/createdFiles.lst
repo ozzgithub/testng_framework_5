@@ -1,12 +1,13 @@
 testng_knowledge/_04_TestDescription.class
+scripts/TechGlobalWaitsTest.class
+testng_knowledge/_01_Annotations.class
+pages/TechGlobalBasePage.class
+utilities/Waiter.class
+testng_knowledge/_03_Priority_and_Dependency.class
 utilities/Driver.class
 pages/TechGlobalFrontendTestingHomePage.class
-testng_knowledge/_01_Annotations.class
 scripts/TechGlobalFrontendTestingHomeTest.class
-pages/TechGlobalBasePage.class
 testng_knowledge/_02_Assertions.class
-utilities/Waiter.class
 scripts/TechGlobalLogoTest.class
 scripts/TechGlobalBase.class
 scripts/TechGlobalHeaderTest.class
-testng_knowledge/_03_Priority_and_Dependency.class
