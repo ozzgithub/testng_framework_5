@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="11" failures="0" name="TestSuite" time="68.374" errors="0" skipped="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="155.073" tests="14" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_341.jdk/Contents/Home/jre/lib"/>
@@ -22,8 +22,7 @@
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_341.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.io.tmpdir" value="/var/folders/xk/lxffp93d14d1w9t2nm1p_rzc0000gn/T/"/>
-    <property name="line.separator" value="
-"/>
+    <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="classworlds.conf" value="/Applications/apache-maven-3.8.7/bin/m2.conf"/>
@@ -46,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_341.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -PRegression"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -64,15 +63,18 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="scripts.TechGlobalFrontendTestingHomeTest" name="validateFrontendTestingCards" time="2.813"/>
-  <testcase classname="scripts.TechGlobalFrontendTestingHomeTest" name="validateFrontendTestingURL" time="0.671"/>
-  <testcase classname="scripts.TechGlobalLogoTest" name="validateTechGlobalLogo" time="0.206"/>
-  <testcase classname="scripts.TechGlobalHeaderTest" name="validateTechGlobalHeaderDropdown" time="0.118"/>
-  <testcase classname="scripts.TechGlobalHeaderTest" name="validateTechGlobalHeaderDropdownOptions" time="0.509"/>
-  <testcase classname="scripts.TechGlobalCheckBoxTest" name="checkBoxes" time="9.286"/>
-  <testcase classname="scripts.TechGlobalCheckBoxTest" name="checkBoxes2" time="9.29"/>
-  <testcase classname="scripts.TechGlobalWaitsTest" name="validateRedBox" time="35.948"/>
-  <testcase classname="scripts.TechGlobalDynamicElementsTest" name="dynamicElementsTest" time="1.055"/>
-  <testcase classname="scripts.TechGlobalRadioButtonsTest" name="languageRadioButtons" time="7.322"/>
-  <testcase classname="scripts.TechGlobalRadioButtonsTest" name="languageRadioButtons2" time="1.156"/>
+  <testcase name="checkBoxes" classname="scripts.TechGlobalCheckBoxTest" time="9.632"/>
+  <testcase name="checkBoxes2" classname="scripts.TechGlobalCheckBoxTest" time="9.553"/>
+  <testcase name="dynamicElementsTest" classname="scripts.TechGlobalDynamicElementsTest" time="1.14"/>
+  <testcase name="validateFrontendTestingURL" classname="scripts.TechGlobalFrontendTestingHomeTest" time="0.858"/>
+  <testcase name="validateTechGlobalHeaderDropdownOptions" classname="scripts.TechGlobalHeaderTest" time="0.456"/>
+  <testcase name="languageRadioButtons" classname="scripts.TechGlobalRadioButtonsTest" time="7.698"/>
+  <testcase name="languageRadioButtons2" classname="scripts.TechGlobalRadioButtonsTest" time="1.472"/>
+  <testcase name="validateBlueBox" classname="scripts.TechGlobalWaitsTest" time="36.239"/>
+  <testcase name="selectDeliveryOption" classname="scripts.TechGlobalDropdownsTest" time="5.225"/>
+  <testcase name="selectProductOption" classname="scripts.TechGlobalDropdownsTest" time="5.145"/>
+  <testcase name="selectColorOption" classname="scripts.TechGlobalDropdownsTest" time="5.125"/>
+  <testcase name="validateTheItemSelected" classname="scripts.TechGlobalDropdownsTest" time="0.481"/>
+  <testcase name="validateAppleLink" classname="scripts.TechGlobalMultipleWindowsTest" time="5.145"/>
+  <testcase name="validateLinkURL" classname="scripts.TechGlobalMultipleWindowsTest" time="7.357"/>
 </testsuite>
