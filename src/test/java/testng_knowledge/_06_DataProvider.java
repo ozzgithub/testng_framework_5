@@ -19,9 +19,13 @@ public class _06_DataProvider {
 
         driver.findElement(By.name("q")).sendKeys(data + Keys.ENTER);
 
+
+
         //Assertions
         WebElement resultStatistics = driver.findElement(By.id("result-stats"));
         String result = resultStatistics.getText();
+
+        //  About 15,810,000,000 results (0.53 seconds)     // 15810000000L int
 
         Assert.assertTrue(Long.parseLong(result.substring(result.indexOf(" ") + 1, result.indexOf("results") - 1).replace(",", "")) > 0);
 

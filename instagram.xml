@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Instagram Test">
+    <test name="Login function">
+        <parameter name="browser" value="chrome"/>
+
+            <classes>
+
+                <class name="testng_knowledge._10_Parameterization"/>
+
+            </classes>
+
+
+
+    </test>
+</suite>
+
