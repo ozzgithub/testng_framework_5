@@ -29,7 +29,7 @@ public class Driver {
                     driver = new FirefoxDriver();
                     break;
                 case "safari":
-                    WebDriverManager.getInstance(SafariDriver.class);
+                    WebDriverManager.safaridriver().setup();
                     driver = new SafariDriver();
                     break;
                 default:
