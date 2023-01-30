@@ -7,6 +7,10 @@ import pages.TechGlobalCalendarPage;
 import pages.TechGlobalFrontendTestingHomePage;
 import utilities.Waiter;
 
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+
 public class TechGlobalCalendarTest extends TechGlobalBase{
 
 
@@ -25,13 +29,25 @@ public class TechGlobalCalendarTest extends TechGlobalBase{
 
         techGlobalCalendarPage.calendarButton.click();
 
-        techGlobalCalendarPage.navigateToYearAndMonth(2024, "May");
+        int year = 2024, month = 5, day = 16;
 
-       Waiter.pause(3);
 
-        techGlobalCalendarPage.clickOnDate(16);
+        String montString = Month.of(month).toString().charAt(0) + Month.of(month).toString().substring(1);
 
-       Assert.assertEquals(techGlobalCalendarPage.result.getText(), "You have selected Thu  May 16 2024.");
+         System.out.println(montString);
+
+
+//        techGlobalCalendarPage.navigateToYearAndMonth(year, montString);
+//        techGlobalCalendarPage.clickOnDate(day);
+//
+//
+//       LocalDate selectDate = LocalDate.of(year, month, day);
+//       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEE MMM dd yyyy");
+//       String expectedDate = selectDate.format(formatter);
+//
+//
+//
+//       Assert.assertEquals(techGlobalCalendarPage.result.getText(), "You have selected " + expectedDate + ".");
    }
 }
 

@@ -11,6 +11,7 @@ import utilities.Driver;
 public class TechGlobalBase {
     WebDriver driver;
     SoftAssert softAssert;
+
     TechGlobalBasePage techGlobalBasePage;
     TechGlobalFrontendTestingHomePage techGlobalFrontendTestingHomePage;
     TechGlobalDynamicElementsPage techGlobalDynamicElementsPage;
@@ -26,6 +27,7 @@ public class TechGlobalBase {
     TechGlobalFileDownloadPage techGlobalFileDownloadPage;
     TechGlobalStaticTablesPage techGlobalStaticTablesPage;
     TechGlobalCalendarPage techGlobalCalendarPage;
+    TechGlobalSortableTablesPage techGlobalSortableTablesPage;
     @BeforeMethod
     public void setup() {
         driver = Driver.getDriver();
