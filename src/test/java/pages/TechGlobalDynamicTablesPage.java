@@ -31,5 +31,8 @@ public class TechGlobalDynamicTablesPage extends TechGlobalBasePage{
     @FindBy(css = "tbody td:nth-child(1)")
     public List<WebElement> tableRow;
 
+    @FindBy(css = "table")
+    public WebElement table;
+
 
 }

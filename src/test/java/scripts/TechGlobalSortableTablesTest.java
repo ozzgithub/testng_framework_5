@@ -1,14 +1,12 @@
 package scripts;
 
-import com.google.common.collect.Table;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.TechGlobalFrontendTestingHomePage;
 import pages.TechGlobalSortableTablesPage;
-import utilities.TableData;
-import utilities.Waiter;
+import utilities.TableHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +35,7 @@ public class TechGlobalSortableTablesTest extends TechGlobalBase {
     public void validateSortAscByQuantity() {
         techGlobalSortableTablesPage.ascByQuantity.click();
 
-        List<WebElement> quantityColumnElements = TableData.getTableColumn(driver, 1);
+        List<WebElement> quantityColumnElements = TableHandler.getTableColumn(driver, 1);
         List<Integer> quantityColumn = new ArrayList<>();
 
         for (WebElement element : quantityColumnElements) {
@@ -64,7 +62,7 @@ public class TechGlobalSortableTablesTest extends TechGlobalBase {
     public void ValidateSortDesQuantity() {
 
         techGlobalSortableTablesPage.descByQuantity.click();
-        List<WebElement> quantityColumnElements = TableData.getTableColumn(driver, 1);
+        List<WebElement> quantityColumnElements = TableHandler.getTableColumn(driver, 1);
         List<Integer> quantityColumn = new ArrayList<>();
         for (WebElement element : quantityColumnElements) {
             quantityColumn.add((Integer.parseInt(element.getText())));
@@ -86,13 +84,11 @@ public class TechGlobalSortableTablesTest extends TechGlobalBase {
      * Click on the Price sort button to toggle Ascending Order
      * Verify that the Price column of the table is sorted in ascending order
      */
-
-
     @Test(priority = 3, description = "Sort table by ascending and validate it's sorted by price")
     public void validateSortAscPrice() {
 
         techGlobalSortableTablesPage.ascByPrice.click();
-        List<WebElement> priceColumnElements = TableData.getTableColumn(driver, 3);
+        List<WebElement> priceColumnElements = TableHandler.getTableColumn(driver, 3);
         List<Integer> priceColumn = new ArrayList<>();
 
         for (WebElement element : priceColumnElements) {
@@ -119,7 +115,7 @@ public class TechGlobalSortableTablesTest extends TechGlobalBase {
 
         techGlobalSortableTablesPage.descByPrice.click();
 
-        List<WebElement> priceColumnElement = TableData.getTableColumn(driver, 3);
+        List<WebElement> priceColumnElement = TableHandler.getTableColumn(driver, 3);
         List<Integer> priceColumn = new ArrayList<>();
 
         for (WebElement element : priceColumnElement) {
